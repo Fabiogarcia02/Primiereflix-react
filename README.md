@@ -1,4 +1,10 @@
 Primiereflix React 🎬
+<img width="2559" height="1301" alt="image" src="https://github.com/user-attachments/assets/afb0c0e0-789c-4ef3-8e83-80147f23b51d" />
+<img width="2555" height="1288" alt="image" src="https://github.com/user-attachments/assets/c9dc0c51-aa71-44c9-b77f-03d4f5b2746f" />
+<img width="2559" height="1286" alt="image" src="https://github.com/user-attachments/assets/d048ea71-e863-439d-85ac-10522920a5e4" />
+
+
+
 
 Um projeto de frontend em React com backend em Node.js/Express, simulando uma plataforma de filmes onde o usuário pode se cadastrar, fazer login e gerenciar seus filmes favoritos.
 
