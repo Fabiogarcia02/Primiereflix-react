@@ -1,0 +1,82 @@
+/* Container principal do filme */
+.filme-info {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #1b1630;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  font-family: 'Poppins', sans-serif;
+  color: #f3e8ff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Título do filme */
+.filme-info h1 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+  background: linear-gradient(90deg, #380469 0%, #7a28c8 100%);
+  
+  -webkit-text-fill-color: transparent;
+}
+
+/* Imagem do filme */
+.filme-info img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.filme-info img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+}
+
+/* Seção de sinopse */
+.filme-info h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  color: #e0caff;
+}
+
+.filme-info span {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #dcd2ff;
+  text-align: justify;
+  margin-bottom: 20px;
+}
+
+/* Avaliação IMDb */
+.filme-info strong {
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 12px;
+  background: linear-gradient(90deg, #380469 0%, #7a28c8 100%);
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  margin-bottom: 10px;
+}
+
+/* Estado de carregamento */
+.filme-info h2 {
+  font-size: 24px;
+  color: #dcd2ff;
+  text-align: center;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}
