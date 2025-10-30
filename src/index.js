@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 
+
 // Importa o componente principal da aplicação
 import App from './App';
 

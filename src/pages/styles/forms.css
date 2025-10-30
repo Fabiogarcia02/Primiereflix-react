@@ -1,0 +1,104 @@
+.form-container {
+  max-width: 400px;
+  margin: 80px auto;
+  padding: 40px;
+  background: #1a142d;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  color: #f3e8ff;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Título */
+.form-container h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: linear-gradient(90deg, #6e17c4 0%, #b35cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Formulário */
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 15px;
+}
+
+.form input {
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: none;
+  background: #2a204a;
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+  transition: 0.3s;
+}
+
+.form input::placeholder {
+  color: #bbaedb;
+}
+
+.form input:focus {
+  background: #3a2c6b;
+  box-shadow: 0 0 10px #8c3dff;
+}
+
+/* Botão */
+.form button {
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  background: linear-gradient(90deg, #7b2aff 0%, #a142ff 100%);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.form button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(162, 66, 255, 0.6);
+}
+
+/* Links (login/cadastro) */
+.form-container .links {
+  text-align: center;
+  font-size: 15px;
+  color: #ddd;
+}
+
+.form-container .links a {
+  color: #b35cff;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 4px;
+  transition: 0.2s;
+}
+
+.form-container .links a:hover {
+  text-decoration: underline;
+  color: #d9a6ff;
+}
+
+/* Animação de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,135 @@
+/* Container principal */
+.meus-filmes {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 30px;
+  background: #1b1630;
+  border-radius: 20px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.6);
+  color: #f3e8ff;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Título */
+.meus-filmes h1 {
+  font-size: 34px;
+  text-align: center;
+  margin-bottom: 40px;
+  background: linear-gradient(90deg, #380469 0%, #7a28c8 100%);
+
+  -webkit-text-fill-color: transparent;
+}
+
+/* Mensagem de lista vazia */
+.sem-filmes {
+  display: block;
+  text-align: center;
+  color: #bda9ff;
+  font-size: 18px;
+  margin-top: 20px;
+  animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Lista */
+.meus-filmes ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.meus-filmes li {
+  background: #261d4b;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px; /* distância entre nome e container de botões */
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.meus-filmes li:hover {
+  background: #2e2358;
+  transform: scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Nome do filme */
+.meus-filmes span {
+  flex: 1; /* ocupa espaço disponível */
+  margin-right: 20px; /* distância do container de botões */
+  font-size: 18px;
+  font-weight: 500;
+  color: #e8dbff;
+  word-break: break-word;
+}
+
+/* Container de botões */
+.acoes {
+  display: flex;
+  gap: 12px; /* separa "Ver detalhes" e "Excluir" */
+  align-items: center;
+}
+
+/* Botão "Ver detalhes" */
+.btn-ver {
+  background: linear-gradient(90deg, #5e00b9, #a142ff);
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 10px rgba(162, 66, 255, 0.4);
+}
+
+.btn-ver:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 14px rgba(162, 66, 255, 0.6);
+}
+
+/* Botão "Excluir" */
+.btn-excluir {
+  background: transparent;
+  border: 2px solid #ff4b4b;
+  color: #ff4b4b;
+  font-weight: 600;
+  font-size: 16px;
+  padding: 10px 22px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-excluir:hover {
+  background: #ff4b4b;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* Responsividade para telas pequenas */
+@media (max-width: 600px) {
+  .meus-filmes li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .acoes {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .btn-ver, .btn-excluir {
+    width: 100%;
+    text-align: center;
+  }
+}

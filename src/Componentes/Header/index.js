@@ -1,12 +1,31 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './header.css';
 
+function Header({ loggedIn, setLoggedIn }) {
+  const navigate = useNavigate();
 
-function Header() {
+  function logout() {
+    localStorage.removeItem("token");
+    setLoggedIn(false);
+    navigate("/login");
+  }
+
   return (
     <header>
       <Link className='logo' to="/">Primiere Flix</Link>
-      <Link className='favoritos' to="/favoritos">Meus Filmes</Link>
+
+      <div className="header-links">
+        <Link className='favoritos' to="/favoritos">Meus Filmes</Link>
+
+        {loggedIn ? (
+          <button className='btn-logout' onClick={logout}>Logout</button>
+        ) : (
+          <>
+            <Link className='favoritos' to="/login">Login</Link>
+            <Link className='favoritos' to="/register">Cadastro</Link>
+          </>
+        )}
+      </div>
     </header>
   );
 }
