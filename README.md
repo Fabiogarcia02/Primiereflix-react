@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+Primiereflix React 🎬
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Um projeto de frontend em React com backend em Node.js/Express, simulando uma plataforma de filmes onde o usuário pode se cadastrar, fazer login e gerenciar seus filmes favoritos.
 
-## Available Scripts
+O projeto consome dados da The Movie Database (TMDB) e permite visualizar detalhes de filmes em uma interface moderna e responsiva.
 
-In the project directory, you can run:
+Funcionalidades
 
-### `npm start`
+Cadastro de usuário com hash de senha (bcrypt)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Login com JWT para autenticação de rotas privadas
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Adição e remoção de filmes favoritos com persistência em localStorage
 
-### `npm test`
+Visualização de filmes em destaque, detalhes de cada filme e trailers
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Rotas privadas protegidas por token JWT
 
-### `npm run build`
+Interface responsiva e amigável, com notificações usando react-toastify
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Tecnologias Utilizadas
+Frontend
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+React
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+React Router DOM
 
-### `npm run eject`
+Axios (com instância para backend)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+React Toastify
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+CSS personalizado para formulários e páginas
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Backend
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Node.js
 
-## Learn More
+Express
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+CORS
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+bcrypt (hash de senhas)
 
-### Code Splitting
+jsonwebtoken (JWT)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Estrutura do Projeto
+primiere/
+├─ backend/           # Servidor Node.js
+│  ├─ server.js
+│  └─ package.json
+├─ src/               # Frontend React
+│  ├─ pages/
+│  │  ├─ Home/
+│  │  ├─ Filmes/
+│  │  ├─ Favoritos/
+│  │  ├─ Login/
+│  │  └─ Register/
+│  ├─ Components/
+│  │  └─ Header.js
+│  └─ services/
+│     └─ axiosInstance.js
+└─ package.json
